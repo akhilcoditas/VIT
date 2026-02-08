@@ -237,8 +237,16 @@ function initCounterAnimation() {
     });
 
     function animateCounter(element) {
-        const text = element.textContent;
+        const text = element.textContent.trim();
+        
+        // Skip animation for non-standard formats like "24/7"
+        if (text.includes('/') || text.includes(':')) {
+            return;
+        }
+        
         const target = parseInt(text.replace(/\D/g, ''));
+        if (isNaN(target) || target === 0) return;
+        
         const suffix = text.replace(/[\d,]/g, '');
         const duration = 2000;
         const increment = target / (duration / 16);
