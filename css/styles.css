@@ -360,76 +360,51 @@ p {
     z-index: 1001;
 }
 
-.logo-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, var(--accent-400) 0%, var(--primary-400) 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.logo-icon::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    transform: translateY(-2px);
-}
-
-.logo-icon::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 12px;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 50%;
-    transform: rotateX(70deg) translateY(8px);
+/* Logo Image Styling */
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-normal);
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .logo-text .brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
     color: var(--white);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    text-shadow: 0.5px 0 0 currentColor;
     transition: var(--transition-normal);
 }
 
 .logo-text .brand-tagline {
-    font-family: var(--font-primary);
-    font-size: 0.65rem;
-    font-weight: 500;
-    color: var(--accent-300);
-    letter-spacing: 3px;
+    font-family: 'Michroma', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 400;
+    color: #4dd0e1;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    margin-top: 4px;
+    text-shadow: 0.3px 0 0 currentColor;
     transition: var(--transition-normal);
 }
 
 .header.scrolled .logo-text .brand-name {
-    color: var(--primary-700);
+    color: #0a3d62;
 }
 
 .header.scrolled .logo-text .brand-tagline {
-    color: var(--primary-500);
+    color: #00838f;
 }
 
-/* Hide image-based logo, use CSS logo instead */
-.logo img {
-    display: none;
-}
 
 /* For pages that still use old logo format */
 .logo span {
@@ -1176,12 +1151,29 @@ p {
     margin-bottom: 10px;
 }
 
+.footer-brand .logo .logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-brand .logo .brand-name {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--white);
+    letter-spacing: 2px;
+    text-shadow: 0.5px 0 0 currentColor;
 }
 
 .footer-brand .logo .brand-tagline {
-    color: var(--accent-300);
+    font-family: 'Michroma', sans-serif;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: #4dd0e1;
+    letter-spacing: 3px;
+    margin-top: 3px;
+    text-shadow: 0.3px 0 0 currentColor;
 }
 
 .footer-brand p {
